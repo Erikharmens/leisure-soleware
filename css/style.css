@@ -1,0 +1,24 @@
+a {
+    text-decoration: none;
+}
+
+.active {
+    color: green;
+}
+
+
+.edit-form {
+    display: none;
+}
+
+.container {
+    width: 80%;
+    background-color: honeydew;
+}
+
+.product-container {
+    width: auto;
+    background-color: rgb(208, 208, 208);
+    margin: 1rem;
+    padding: 1rem;
+}
