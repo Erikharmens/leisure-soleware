@@ -1,3 +1,22 @@
+:root {
+    /* HEX CHOCO : #30241C */
+    --chocolatebar-base: 24;
+    --chocolatebar: hsla(var(--chocolatebar-base), 26%, 15%, 100%);
+    --chocolatebar-dark: hsla(var(--chocolatebar-base), 26%, 10%, 100%);
+    --chocolatebar-light: hsla(var(--chocolatebar-base), 26%, 20%, 100%);
+
+    /* HEX LIGHT CHOCO: #5E3123 */
+    --leatherbrown-base: 14;
+    --leatherbrown: hsla(var(--leatherbrown-base), 46%, 25%, 100%);
+    --leatherbrown-dark: hsla(var(--leatherbrown-base), 46%, 20%, 100%);
+    --leatherbrown-light: hsla(var(--leatherbrown-base), 46%, 30%, 100%);
+}
+
+body {
+    max-width: 100vw;
+    margin: auto;
+}
+
 a {
     text-decoration: none;
 }
@@ -12,13 +31,43 @@ a {
 }
 
 .container {
+    margin: auto;
     width: 80%;
-    background-color: honeydew;
+    background-color: rgb(199, 199, 199);
+}
+
+.menu-container {
+    margin: 1rem;
+    padding: 1rem;
 }
 
 .product-container {
     width: auto;
-    background-color: rgb(208, 208, 208);
+    background-color: rgb(179, 179, 179);
     margin: 1rem;
     padding: 1rem;
 }
+
+h1 {
+    color: var(--chocolatebar);
+}
+.search {
+    margin: 1rem;
+}
+
+
+.message {
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
+.message.error {
+    border-color: red;
+    color: red;
+}
+
+.message.success {
+    border-color: green;
+    color: green;
+}
+
