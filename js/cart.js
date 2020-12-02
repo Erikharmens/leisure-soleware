@@ -14,10 +14,11 @@ if (favourites.length === 0) {
     favourites.forEach((favourite) => {
         productContainer.innerHTML += `<div class="product">
         <h4>${favourite.name}</h4>
-        <h4>${favourite.id}</h4>
+        <img class="productImage" src="${favourite.image}">
         <h4>${favourite.price}</h4>
         <h4>${favourite.brand}</h4>
         <h4>${favourite.description}</h4>
+        <a href="detail.html?id=${favourite.id}"><button class="detail-button">View</button></a>
         <i class="fa fa-heart"></i>
         </div>`;
     });
@@ -34,4 +35,3 @@ clearFavButton.onclick = function deleteProducts() {
     }
 };
 
-console.log(favourites);

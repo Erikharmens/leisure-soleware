@@ -29,6 +29,7 @@ const description = document.querySelector("#description");
 const idInput = document.querySelector("#id");
 const message = document.querySelector(".message-container");
 const loading = document.querySelector(".loading");
+const image = document.querySelector("#image");
 
 
 (async function () {
@@ -64,18 +65,18 @@ function submitForm(event) {
     const priceValue = parseFloat(price.value);
     const descriptionValue = description.value.trim();
     const idValue = idInput.value;
-
+    const imageValue = image.value.trim();
 
     if (titleValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || descriptionValue.length === 0) {
         displayMessage("warning", "Please supply proper values", ".message-container");
     }
 
-    updateProduct(titleValue, priceValue, descriptionValue, idValue);
+    updateProduct(titleValue, priceValue, descriptionValue, idValue, imageValue);
 }
 
-async function updateProduct(title, price, description, id) {
+async function updateProduct(title, price, description, id, image_url) {
     const url = baseUrl + "products/" + id;
-    const data = JSON.stringify({ title: title, price: price, description: description });
+    const data = JSON.stringify({ title: title, price: price, description: description, image_url: image_url });
 
     const options = {
         method: "PUT",

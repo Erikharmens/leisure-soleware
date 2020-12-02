@@ -36,10 +36,9 @@ a {
     background-color: rgb(199, 199, 199);
 }
 
-.menu-container {
-    margin: 1rem;
-    padding: 1rem;
-}
+
+
+
 
 .product-container {
     width: auto;
@@ -71,3 +70,37 @@ h1 {
     color: green;
 }
 
+
+
+/* _____ NAVBAR _____ */
+.menu-container {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+}
+
+.menu-container a {
+    float: center;
+    text-align: center;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    /* line-height: 50%; */
+}
+
+#myCart {
+    float: right;
+}
+
+#logout{
+    float: right;
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+
+.productImage {
+    width: auto;
+    height: 300px;
+}

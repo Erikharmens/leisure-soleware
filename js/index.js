@@ -41,6 +41,7 @@ function handleClick() {
     const description = this.dataset.description;
     const price = this.dataset.price;
     const brand = this.dataset.brand;
+    const image = this.dataset.image_url;
 
   
     const currentFavs = getExistingFavs();
@@ -50,7 +51,7 @@ function handleClick() {
     });
   
     if (productExists === undefined) {
-      const product = { id: id, name: name, description: description, price: price, brand: brand };
+      const product = { id: id, name: name, description: description, price: price, brand: brand, image: image };
       currentFavs.push(product);
       saveFavs(currentFavs);
     } else {

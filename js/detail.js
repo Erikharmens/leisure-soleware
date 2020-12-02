@@ -27,6 +27,7 @@ const productUrl = baseUrl + "products/" + id;
         const container = document.querySelector(".detail-container");
     
         container.innerHTML = `<h1>${details.title}</h1>
+                                <img class="productImage" src="${details.image_url}">
                                 <p>Price: ${details.price}</p>
                                 <p>${details.description}</p>
         `;

@@ -9,7 +9,7 @@ export default function createMenu() {
     const username = getUsername();
 
     let authLink = `<a href="login.html" class="${pathname === "/login.html" ? "active" : ""}">Login</a>`;
-    let authLinkFav = `<a href="cart.html" class="${pathname === "/cart.html" ? "active" : ""}">My cart</a>`;
+    let authLinkFav = `<a href="cart.html" id="myCart" class="${pathname === "/cart.html" ? "active" : ""}">My cart</a>`;
 
     if (username) {
         authLink = `<a href="add.html" class="${pathname === "/add.html" ? "active" : ""}">Add Product</a>
