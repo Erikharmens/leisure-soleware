@@ -20,9 +20,8 @@ export function renderProducts(productsToRender) {
         productContainer.innerHTML += `<a class="product" >
                                             <h4>${product.title}</h4>
                                             <img class="productImage" src="${product.image_url}">
-                                            <i class="${cssClass} fa-heart" data-id="${product.id}" data-name="${product.title}" data-description="${product.description}" data-price="${product.price}" data-brand="${product.brand}" data-image_url="${product.image_url}"></i>
-                                            <p>${product.price}</p>
-                                            <p>${product.brand}</p>
+                                            <button class="cart-button"><i class="${cssClass} fa-heart" data-id="${product.id}" data-name="${product.title}" data-description="${product.description}" data-price="${product.price}" data-brand="${product.brand}" data-image_url="${product.image_url}"></i>Add to cart</button>
+                                            <p>${product.price} NOK</p>
                                             <p>${product.description}</p>
                                             <a href="detail.html?id=${product.id}"><button class="detail-button">View</button></a>
                                             <a href="edit.html?id=${product.id}"><button class="edit-button">Edit</button></a>

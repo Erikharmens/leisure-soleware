@@ -31,7 +31,7 @@ clearFavButton.onclick = function deleteProducts() {
         productContainer.innerHTML = "OOPSIE";
     } else {
         localStorage.removeItem("favourites");
-        productContainer.innerHTML = "POOOF";
+        productContainer.innerHTML = "Shopping cart cleared!";
     }
 };
 

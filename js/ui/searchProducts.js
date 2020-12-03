@@ -9,8 +9,10 @@ export function searchProducts (products) {
     search.onkeyup = function(event) {
 
         const searchValue = event.target.value.trim().toLowerCase();
+        
     
         const filteredProducts = products.filter(function (product) {
+            // console.log("product", product);
             if (product.title.toLowerCase().startsWith(searchValue)) {
                 return true;
             }

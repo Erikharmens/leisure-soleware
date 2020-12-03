@@ -15,11 +15,14 @@
 body {
     max-width: 100vw;
     margin: auto;
+    background-color: #F1F1F1;
 }
 
 a {
     text-decoration: none;
 }
+
+
 
 .active {
     color: green;
@@ -75,18 +78,23 @@ h1 {
 /* _____ NAVBAR _____ */
 .menu-container {
     width: 100%;
-    background-color: #555;
+    background-color: #F1F1F1;
     overflow: auto;
+    position: -webkit-sticky;
+	position: sticky;
+    top: 0;
+    box-shadow: 0 8px 8px -8px rgba(0,0,0,.2);
 }
 
 .menu-container a {
-    float: center;
+    float: left;
     text-align: center;
     padding: 12px;
-    color: white;
+    color: var(--chocolatebar);
     text-decoration: none;
-    font-size: 17px;
-    /* line-height: 50%; */
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Lato', sans-serif;    /* line-height: 50%; */
 }
 
 #myCart {
@@ -100,6 +108,74 @@ h1 {
 }
 
 
+/* _____ HERO SECTION _____ */
+.hero-banner-box {
+    display: inline-block;
+}
+
+.heroImage {
+    max-width: 100%;
+}
+
+.company-title {
+    font-size: 80px;
+    text-align: center;
+    color:  #F1F1F1;
+    position: absolute;
+    margin: 0 auto;
+    font-family: 'Playfair Display', serif;
+    top: 10%;
+    left: 0;
+    right: 0;
+    cursor: default;
+}
+
+.company-title-h1 {
+    color: whitesmoke;
+    font-size: 28px;
+    font-weight: 100;
+    margin-top: -1.2rem;
+}
+
+.company-title-hr {
+    margin: 0 auto;
+    width: 60%;
+
+    
+        overflow: visible; /* For IE */
+        height: 30px;
+        border-style: solid;
+        border-color: whitesmoke;
+        border-width: 1px 0 0 0;
+        border-radius: 20px;
+    
+}
+.company-title-hr:before {
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: whitesmoke;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+
+#shopBtn {
+    position: absolute;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    color: #666666;
+    border: 2px solid #666666;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 1s;
+}
+#shopBtn:hover {
+    color: #d8d8d8;
+    border: 2px solid #d8d8d8;
+}
 .productImage {
     width: auto;
     height: 300px;

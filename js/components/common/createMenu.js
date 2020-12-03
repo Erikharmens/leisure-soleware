@@ -8,16 +8,17 @@ export default function createMenu() {
 
     const username = getUsername();
 
-    let authLink = `<a href="login.html" class="${pathname === "/login.html" ? "active" : ""}">Login</a>`;
-    let authLinkFav = `<a href="cart.html" id="myCart" class="${pathname === "/cart.html" ? "active" : ""}">My cart</a>`;
+    let authLink = `<a href="login.html" class="${pathname === "/login.html" ? "active" : ""}">LOGIN</a>`;
+    let authLinkFav = `<a href="cart.html" id="myCart" class="${pathname === "/cart.html" ? "active" : ""}">MY CART</a>`;
 
     if (username) {
-        authLink = `<a href="add.html" class="${pathname === "/add.html" ? "active" : ""}">Add Product</a>
+        authLink = `<a href="add.html" class="${pathname === "/add.html" ? "active" : ""}">ADD PRODUCT</a>
         <button id="logout">Logout ${username}</button>`;
     }
     container.innerHTML = `
             <div class="menu">
-                <a href="/" class="${pathname === "/" || pathname === "/index.html" ? "active" : ""}">Home</a>
+                <a href="/" class="${pathname === "/" || pathname === "/index.html" ? "active" : ""}">HOME</a>
+                <a href="shop.html" class="${pathname === "/" || pathname === "/shop.html" ? "active" : ""}">SHOP</a>
                 ${authLink} ${authLinkFav}
             </div>`;
 

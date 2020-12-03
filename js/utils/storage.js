@@ -24,7 +24,8 @@ export function getUsername() {
 }
 
 export function clearStorage() {
-    localStorage.clear();
+    localStorage.removeItem("user");
+    localStorage.removeItem("token");
 }
 
 function saveToStorage(key, value) {

@@ -32,8 +32,8 @@ function submitForm(event) {
 
     console.log("priceValue", priceValue);
 
-    if(titleValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || descriptionValue.length === 0) {
-        displayMessage("warning", "Please supply proper values", ".message-container");
+    if(titleValue.length === null || priceValue.length === null || isNaN(priceValue) || descriptionValue.length === null || imageValue === null) {
+       return displayMessage("warning", "Please supply proper values", ".message-container");
     }
     console.log("imageValue: ", imageValue);
 

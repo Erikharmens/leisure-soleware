@@ -27,6 +27,7 @@ const productUrl = baseUrl + "products/" + id;
         const container = document.querySelector(".detail-container");
     
         container.innerHTML = `<h1>${details.title}</h1>
+        <button class="detailButton" data-id="${details.id}" data-name="${details.title}" data-description="${details.description}" data-price="${details.price}" data-brand="${details.brand}" data-image_url="${details.image_url}">Add to cart</button>
                                 <img class="productImage" src="${details.image_url}">
                                 <p>Price: ${details.price}</p>
                                 <p>${details.description}</p>
