@@ -17,7 +17,6 @@ if (cartProducts.length === 0) {
         <h4>${cartProduct.name}</h4>
         <h4>${cartProduct.price} NOK</h4>
         <a href="detail.html?id=${cartProduct.id}"><button class="detail-button">View</button></a>
-        <i class="fa fa-heart"></i>
         </div>`;
     });
 }
@@ -31,5 +30,6 @@ clearFavButton.onclick = function deleteProducts() {
         localStorage.removeItem("cartProducts");
         productContainer.innerHTML = "Shopping cart cleared!";
     }
+    createMenu();
 };
 

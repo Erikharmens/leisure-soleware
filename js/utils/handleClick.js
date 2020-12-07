@@ -1,4 +1,5 @@
 
+import createMenu from '../components/common/createMenu.js';
 import { getExistingCart } from './cartFunctions.js';
 
 export default function handleClick() {
@@ -9,7 +10,7 @@ export default function handleClick() {
     const name = this.dataset.name;
     const description = this.dataset.description;
     const price = this.dataset.price;
-    const brand = this.dataset.brand;
+    // const brand = this.dataset.brand;
     const image = this.dataset.image_url;
 
   
@@ -20,13 +21,15 @@ export default function handleClick() {
     });
   
     if (productExists === undefined) {
-      const product = { id: id, name: name, description: description, price: price, brand: brand, image: image };
+      const product = { id: id, name: name, description: description, price: price, image: image };
       currentCart.push(product);
       saveCart(currentCart);
     } else {
       const newFavs = currentCart.filter((cart) => cart.id !== id);
       saveCart(newFavs);
+
     }
+    createMenu();
   }
 
 function saveCart(cart) {

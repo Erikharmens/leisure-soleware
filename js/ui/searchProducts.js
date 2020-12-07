@@ -12,14 +12,14 @@ export function searchProducts (products) {
         
     
         const filteredProducts = products.filter(function (product) {
-            // console.log("product", product);
             if (product.title.toLowerCase().startsWith(searchValue)) {
+                console.log("product", product);
                 return true;
             }
             if (product.description.toLowerCase().startsWith(searchValue)) {
                 return true;
             }
-            if (product.price >= searchValue) {
+            if (product.price <= searchValue) {
                 return true;
             }
             
@@ -27,7 +27,7 @@ export function searchProducts (products) {
 
         });
         if (filteredProducts.length === 0) {
-            displayMessage("warning", "No products match your search..", ".message-container")
+            displayMessage("warning", "No matches for your search result..", ".message-container")
         }
         renderProducts(filteredProducts);
     };

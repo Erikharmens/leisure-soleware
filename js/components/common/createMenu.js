@@ -1,4 +1,6 @@
 import { getUsername } from '../../utils/storage.js';
+import { getExistingCart } from '../../utils/cartFunctions.js';
+
 import logoutButton from './logoutButton.js';
 
 export default function createMenu() {
@@ -8,8 +10,13 @@ export default function createMenu() {
 
     const username = getUsername();
 
+    const cartProducts = getExistingCart();
+
+
+   
+
     let authLink = `<a id="login" href="login.html" class="${pathname === "/login.html" ? "active" : ""}">LOGIN</a>`;
-    let authLinkFav = `<a href="cart.html" id="myCart" class="${pathname === "/cart.html" ? "active" : ""}">MY CART</a>`;
+    let authLinkFav = `<a href="cart.html" id="myCart" class="${pathname === "/cart.html" ? "active" : ""}">MY CART (${cartProducts.length})</a>`;
 
     if (username) {
         authLink = `<a href="add.html" class="${pathname === "/add.html" ? "active" : ""}">ADD PRODUCT</a>

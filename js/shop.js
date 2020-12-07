@@ -21,9 +21,9 @@ async function getProducts() {
         searchProducts(json);
         console.log("json: ", json);
 
-        const favButtons = document.querySelectorAll(".product i");
+        const addToCartButtons = document.querySelectorAll(".product .cart-button");
 
-        favButtons.forEach((button) => {
+        addToCartButtons.forEach((button) => {
             button.addEventListener("click", handleClick);
         });
     } catch(error) {
