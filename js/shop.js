@@ -2,7 +2,7 @@ import { baseUrl } from './settings/api.js';
 import displayMessage from './components/common/displayMessage.js';
 import createMenu from './components/common/createMenu.js';
 import handleClick from './utils/handleClick.js';
-import { renderFeaturedProducts } from './ui/renderFeaturedProducts.js';
+import { renderProducts } from './ui/renderProducts.js';
 import { searchProducts } from './ui/searchProducts.js';
 //import { getExistingCart } from './utils/cartFunctions.js';
 
@@ -10,14 +10,14 @@ const productsUrl = baseUrl + "products";
 
 createMenu();
 
-async function getFeaturedProducts() {
+async function getProducts() {
     try {
         const response = await fetch(productsUrl);
         const json = await response.json();
 
         // console.log(json);
 
-        renderFeaturedProducts(json);
+        renderProducts(json);
         searchProducts(json);
         console.log("json: ", json);
 
@@ -31,8 +31,5 @@ async function getFeaturedProducts() {
     }
 }
 
-getFeaturedProducts();
-
-
-
+getProducts();
 

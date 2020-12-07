@@ -12,18 +12,42 @@
     <title>Leisure Soleware</title>
 </head>
 <body>
+    <div class="hero-banner-box">
+            <div class="hero-container"></div>
+            <div class="company-title">LEISURE SOLEWARE <hr class="company-title-hr"> <h1 class="company-title-h1">TOP QUALITY LEATHER SHOES FOR HIM AND HER</h1></div>
+
+    </div>
     <div class="container">
         <div class="menu-container"></div>
-        <div class="hero-banner-box">
-            <div class="hero-container"></div>
-            <div class="company-title">LEISURE SOLEWARE <hr class="company-title-hr"> <h1 class="company-title-h1">TOP QUALITY LEATHER SHOES FOR HIM AND HER</h1> <a href="shop.html"><button id="shopBtn">SHOP NOW</button></a></div>
-        </div>
-            <h1>Leisure Soleware</h1>
+        
+            <h1 class="featured-title">Featured products</h1>
+            <!-- <hr> -->
 
-            <input class="search" placeholder="Search products..." />
-
+            <!-- <p>Search by name, price</p>
+            <input class="search" placeholder="Search products..." /> -->
+            
             <div class="product-container">Loading products..</div>
+            <div class="message-container"></div>
+            <a href="shop.html"><button class="all-products-button">View All Products</button></a>
+
+            <!-- <img class="advertImage" src="/images/blackshoesFixed.jpg"> -->
     </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-newsletter">
+                <h2 class="footer-title">Newsletter Subscription</h2>
+                <input class="newsletter-input" type="text" placeholder="Email Address" name="mail" required> <br>
+                <label class="footer-label">
+                    <input type="checkbox" checked="checked" name="subscribe"> I've read and accepted Leisure Solewares's Privacy Policy
+                    <input type="submit" value="Subscribe">
+                </label>
+                <br>
+            </div>
+            <p class="footer-text">
+
+            </p>
+        </div>
+    </footer>
 
     <script src="./js/index.js" type="module"></script>
     <script src="./js/ui/renderHero.js" type="module"></script>

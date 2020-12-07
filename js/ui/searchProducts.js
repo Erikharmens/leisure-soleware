@@ -19,12 +19,16 @@ export function searchProducts (products) {
             if (product.description.toLowerCase().startsWith(searchValue)) {
                 return true;
             }
-            if (product.price <= searchValue) {
+            if (product.price >= searchValue) {
                 return true;
             }
+            
+            
 
         });
-    
+        if (filteredProducts.length === 0) {
+            displayMessage("warning", "No products match your search..", ".message-container")
+        }
         renderProducts(filteredProducts);
     };
 }

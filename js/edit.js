@@ -42,6 +42,8 @@ const image = document.querySelector("#image");
         description.value = details.description;
         idInput.value = details.id;
 
+        
+
         deleteButton(details.id);
 
         console.log(details);
@@ -67,16 +69,23 @@ function submitForm(event) {
     const idValue = idInput.value;
     const imageValue = image.value.trim();
 
+    let featuredValue = false;
+    if (document.querySelector("#featured").checked) {
+        featuredValue = true;
+    } else {
+        featuredValue = false;
+    }
+
     if (titleValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || descriptionValue.length === 0) {
         displayMessage("warning", "Please supply proper values", ".message-container");
     }
 
-    updateProduct(titleValue, priceValue, descriptionValue, idValue, imageValue);
+    updateProduct(titleValue, priceValue, descriptionValue, idValue, imageValue, featuredValue);
 }
 
-async function updateProduct(title, price, description, id, image_url) {
+async function updateProduct(title, price, description, id, image_url, featured) {
     const url = baseUrl + "products/" + id;
-    const data = JSON.stringify({ title: title, price: price, description: description, image_url: image_url });
+    const data = JSON.stringify({ title: title, price: price, description: description, image_url: image_url, featured: featured });
 
     const options = {
         method: "PUT",

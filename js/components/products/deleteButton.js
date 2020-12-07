@@ -31,7 +31,7 @@ export default function deleteButton(id) {
         const json = await response.json();
 
 
-        location.href = "/";
+        location.href = "shop.html";
 
         console.log(json);
       } catch (error) {
