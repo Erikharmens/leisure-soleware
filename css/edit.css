@@ -1,0 +1,113 @@
+:root {
+  /* HEX: #30241C */
+  --chocolatebar-base: 24;
+  --chocolatebar: hsla(var(--chocolatebar-base), 26%, 15%, 100%);
+  --chocolatebar-dark: hsla(var(--chocolatebar-base), 26%, 10%, 100%);
+  --chocolatebar-light: hsla(var(--chocolatebar-base), 26%, 20%, 100%);
+
+  /* HEX: #5E3123 */
+  --leatherbrown-base: 14;
+  --leatherbrown: hsla(var(--leatherbrown-base), 46%, 25%, 100%);
+  --leatherbrown-dark: hsla(var(--leatherbrown-base), 46%, 20%, 100%);
+  --leatherbrown-light: hsla(var(--leatherbrown-base), 46%, 30%, 100%);
+}
+
+.edit-form {
+  font-family: "Lato", sans-serif;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type="text"],
+textarea {
+  width: 100%;
+  /* Full width */
+  padding: 12px;
+  /* Some padding */
+  border: 0;
+  /* Gray border */
+  border-radius: 4px;
+  /* Rounded borders */
+  box-sizing: border-box;
+  /* Make sure that padding and width stays in place */
+  margin-top: 6px;
+  /* Add a top margin */
+  margin-bottom: 16px;
+  /* Bottom margin */
+  resize: vertical;
+  /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  outline-color: var(--leatherbrown);
+}
+
+/* Style the submit button with a specific background color etc */
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.form-container {
+  border-radius: 3px;
+  margin: 0 auto;
+  margin-top: 1rem;
+  padding: 1rem;
+  padding-bottom: 80px;
+  max-width: 700px;
+  box-shadow: 0 8px 4px 4px rgba(0, 0, 0, 0.2);
+  border: 3px solid var(--chocolatebar);
+}
+
+.edit-form-title input:focus, .edit-form-price input:focus, .edit-form-description input:focus, .edit-form-image input:focus {
+    outline: none;
+
+}
+
+.edit-button-container {
+  display: grid;
+}
+
+.edit-button-col {
+  display: flex;
+  flex-direction: row;
+}
+
+#update {
+    float: left;
+    padding: 1rem 3rem;
+    background-color: var(--chocolatebar);
+    color: #f1f1f1;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+}
+
+#update:hover {
+    background-color: var(--leatherbrown);
+}
+
+.delete {
+    float: right;
+    padding: 1rem 1.5rem;
+    background-color: var(--chocolatebar);
+    color: #f1f1f1;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+}
+
+.delete:hover {
+    background-color: rgb(140, 37, 37);
+    
+}

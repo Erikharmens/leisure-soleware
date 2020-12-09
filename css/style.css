@@ -20,6 +20,7 @@ body {
 
 a {
     text-decoration: none;
+    color: var(--chocolatebar);
 }
 
 
@@ -68,8 +69,9 @@ a {
 } */
 
 .product-container {
-    border: 3px solid var(--chocolatebar);
-    box-shadow: 0 8px 4px 4px rgba(0,0,0,.2); /* REMOVE THIS ?? */
+    border: 3px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+     /* REMOVE THIS ?? */
     border-radius: 3px;
     padding: 1rem;
     display: grid;
@@ -79,8 +81,17 @@ a {
 }
 
 .product {
+    border-radius: 3px;
+    border: 3px solid var(--chocolatebar);
     margin: 1rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+}
+
+.product:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 8px 10px rgba(0, 0, 0, 0.2);
+
 }
 
 .product-title {
@@ -98,13 +109,14 @@ a {
 }
 
 .product-hr {
-    width: 90%;
-    float: left;
+    width: 100%;
+    border: 1px solid var(--chocolatebar);
 }
 .productImage {
     max-width: 100%;
+    border-bottom: 2px solid var(--chocolatebar);
     height: auto;
-    border-radius: 3px 3px 0 0;
+    /* border-radius: 3px 3px 0 0; */
 }
 
 .cart-button {
@@ -150,15 +162,18 @@ a {
 }
 
 .all-products-button {
-    margin-top: 1rem;
-    width: 100%;
+    border: 3px solid var(--chocolatebar);
+    border-radius: 3px;
+    margin-bottom: 1rem;
+    width: 20%;
     padding: 10px;
-    background-color: var(--leatherbrown);
+    background-color: var(--chocolatebar);
     color: #F1F1F1;
+    font-size: 20px;
 }
 
 .all-products-button:hover {
-    background-color: var(--chocolatebar);
+    background-color: var(--leatherbrown);
     cursor: pointer;
 }
 
@@ -166,13 +181,7 @@ a {
 h1 {
     color: var(--chocolatebar);
 }
-.search {
-    margin: 1rem;
-    width: 20%;
-    padding: 1px;
-    background-color: #F1F1F1;
-    
-}
+
 
 
 
@@ -196,7 +205,7 @@ h1 {
 
 /* _____ NAVBAR _____ */
 .menu-container {
-    position: fixed;
+    margin: 0 auto;
     width: 100%;
     background-color: #F1F1F1;
     overflow: auto;
@@ -229,10 +238,11 @@ h1 {
     margin-left: 5px;
     padding: 1.5px;
     background-color: transparent;
-    color: orange;
+    color: var(--leatherbrown);
     border: 0px;
     border-bottom: 1.5px solid var(--chocolatebar);
     padding-bottom: 3px;
+    font-family: 'Lato', sans-serif;
     
 }
 .search:focus {
@@ -293,7 +303,7 @@ h1 {
     position: absolute;
     margin: 0 auto;
     font-family: 'Playfair Display', serif;
-    top: 5%;
+    top: 7%;
     left: 0;
     right: 0;
     cursor: default;
@@ -348,9 +358,8 @@ h1 {
 
 
 .featured-title {
-    font-size: 30px;
+    font-size: 40px;
     font-family: 'Lato', sans-serif;
-
 }
 
 

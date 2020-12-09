@@ -5,37 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Product</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/add.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
 </head>
 <body>
     <div class="container">
         <div class="menu-container"></div>
+        
+        <div class="form-container">
+    
+            
+            <form class="add-form">
+                
+                <h1 class="form-h1">Add New Product</h1>
+                <div class="message-container"></div>
+                    <hr>
+                <div class="add-form-title">
+                        <label for="title"></label>
+                        <input id="title" placeholder="Product Title.."/>
+                    </div>
+                    <div class="add-form-price">
+                        <label for="price"></label>
+                        <input id="price" placeholder="Product Price.."/>
+                    </div>
+                    <div class="add-form-description">
+                        <label for="description"></label>
+                        <input id="description" placeholder="Product Description.."/>
 
-        <h1>Add product</h1>
+                    <div class="add-form-image">
+                        <label for="image"></label>
+                        <input id="image" placeholder="Image URL.."/>
+                    </div>
+                    <div class="add-form-checkbox">
+                        <label for="featured"></label>
+                        <p class="checkbox-text">Click below to feature this product</p>
+                        <input id="featured" type="checkbox" />
+                    </div>
+                </div>
+                <button class="add-button">Add This Product</button>
+            </form>
 
-        <form>
-            <div class="message-container"></div>
-                <div>
-                    <label for="title">Title</label>
-                    <input id="title" />
-                </div>
-                <div>
-                    <label for="price">Price</label>
-                    <input id="price" />
-                </div>
-                <div>
-                    <label for="description">Description</label>
-                    <input id="description" />
-                <div>
-                    <label for="image">Insert image url here:</label>
-                    <input id="image" />
-                </div>
-                <div>
-                    <label for="featured">Featured</label>
-                    <input id="featured" type="checkbox"/>
-                </div>
-            </div>
-            <button>Add</button>
-        </form>
+        </div>
     </div>
     <script src="js/add.js" type="module"></script>
 </body>

@@ -9,7 +9,7 @@ console.log(cartProducts);
 const productContainer = document.querySelector(".product-container");
 
 if (cartProducts.length === 0) {
-    productContainer.innerHTML = "No items in cart..";
+    productContainer.innerHTML = "No items in cart.. View our shop and add products to your cart.";
 } else {
     cartProducts.forEach((cartProduct) => {
         productContainer.innerHTML += `<div class="product">
@@ -25,10 +25,10 @@ const clearFavButton = document.querySelector(".removeProducts");
 
 clearFavButton.onclick = function deleteProducts() {
     if ( cartProducts.length == 0) {
-        productContainer.innerHTML = "OOPSIE";
+        productContainer.innerHTML = "No items in cart.. View our shop and add products to your cart.";
     } else {
         localStorage.removeItem("cartProducts");
-        productContainer.innerHTML = "Shopping cart cleared!";
+        productContainer.innerHTML = "Shopping cart cleared.";
     }
     createMenu();
 };

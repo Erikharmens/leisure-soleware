@@ -1,7 +1,7 @@
 import displayMessage from '../components/common/displayMessage.js';
 import { renderProducts } from './renderProducts.js';
 
-export function searchProducts (products) {
+export function searchProducts(products) {
 
     const search = document.querySelector(".search");
 
@@ -13,7 +13,6 @@ export function searchProducts (products) {
     
         const filteredProducts = products.filter(function (product) {
             if (product.title.toLowerCase().startsWith(searchValue)) {
-                console.log("product", product);
                 return true;
             }
             if (product.description.toLowerCase().startsWith(searchValue)) {
@@ -29,6 +28,7 @@ export function searchProducts (products) {
         if (filteredProducts.length === 0) {
             displayMessage("warning", "No matches for your search result..", ".message-container")
         }
+        console.log("tsss", filteredProducts.length);
         renderProducts(filteredProducts);
     };
 }

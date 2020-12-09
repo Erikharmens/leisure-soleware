@@ -3,28 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/login.css">
     <title>Login</title>
 </head>
 <body>
     <div class="container">
         <div class="menu-container"></div>
 
-        <h1>Login</h1>
+        <div class="form-container">
+            <form class="login-form">
+                <h1 class="login-title">Login</h1>
+                <hr>
+                <div class="message-container"></div>
+    
+                <div class="login-form-user">
+                    <label for="username"> Username/Email</label>
+                    <input id="username" type="text"/>
+                </div>
+                <div class="login-form-pass">
+                    <label for="password"> Password</label>
+                    <input id="password" type="password" />
+                    <p class="login-text">Forgot password?</p>
+                </div>
+                <button class="login-form-button">Submit</button>
+                <p class="login-text-newuser">Not a member? <span class="member">Sign up here</span></p>
+            </form>
 
-        <form>
-            <div class="message-container"></div>
-
-            <div>
-                <label for="username"> Username/email</label>
-                <input id="username" />
-            </div>
-            <div>
-                <label for="password"> Password</label>
-                <input id="password" type="password" />
-            </div>
-            <button>Submit</button>
-        </form>
+        </div>
     </div>
     <script src="js/login.js" type="module"></script>
 </body>

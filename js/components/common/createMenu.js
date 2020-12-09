@@ -27,7 +27,7 @@ export default function createMenu() {
                 <a href="/" class="${pathname === "/" || pathname === "/index.html" ? "active" : ""}">HOME</a>
                 <a href="shop.html" class="${pathname === "/" || pathname === "/shop.html" ? "active" : ""}">SHOP</a>
                 <i class="fa fa-search"></i>
-                <input class="search" placeholder="Search..." />
+                <input class="search" placeholder="Search shop..." />
                 ${authLink} ${authLinkFav}
             </div>`;
 
