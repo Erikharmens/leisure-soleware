@@ -33,7 +33,12 @@ async function getFeaturedProducts() {
     }
 }
 
+/* TESTING CHANGING BUTTON */
+
 getFeaturedProducts();
+
+
+
 
 
 

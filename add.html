@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <title>Add Product</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/navbar.css">
     <link rel="stylesheet" href="/css/add.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 
@@ -39,7 +41,7 @@
                     </div>
                     <div class="add-form-checkbox">
                         <label for="featured"></label>
-                        <p class="checkbox-text">Click below to feature this product</p>
+                        <p class="checkbox-text">Toggle box below to feature this product</p>
                         <input id="featured" type="checkbox" />
                     </div>
                 </div>
@@ -48,6 +50,23 @@
 
         </div>
     </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="logo-block-nav">
+                <img class="ls-logo-white" src="images/lslogopng.png">
+                <p class="logo-text">LEISURE SOLEWARE</p>
+            </div>
+            <div class="footer-newsletter">
+                <h2 class="footer-title">Newsletter Subscription</h2>
+                <input class="newsletter-input" type="text" placeholder="Your Email..." name="mail" required> <br>
+                <label class="footer-label">
+                    <input type="checkbox" checked="checked" name="subscribe"> I've read and accepted Leisure Solewares's Privacy Policy
+                    <input class="newsletter-button" type="submit" value="Subscribe">
+                </label>
+                <br>
+            </div>
+        </div>
+    </footer>
     <script src="js/add.js" type="module"></script>
 </body>
 

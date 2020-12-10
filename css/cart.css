@@ -1,0 +1,28 @@
+/* .product-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: auto;
+}
+
+.product {
+    flex-direction: column;
+    width: 50%;
+}
+
+.productImage {
+    width: 300px;
+    float: left;
+}
+
+.product-title {
+    float: left;
+}
+
+.product-price {
+    
+} */
+
+.detail-button {
+    width: 100%;
+}

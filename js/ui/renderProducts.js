@@ -26,9 +26,9 @@ export function renderProducts(productsToRender) {
                                                 <a href="detail.html?id=${product.id}"><img class="productImage" src="${product.image_url}"></a>
                                                 </div>
                                                 <div class="column">
-                                                <a href="detail.html?id=${product.id}"><h4 class="product-title">${product.title}</h4></a><hr class="product-hr">
+                                                <a href="detail.html?id=${product.id}"><h4 class="product-title">${product.title}</h4></a><hr>
                                                     <p class="product-price">${product.price} NOK</p>
-                                                    <button class="cart-button" data-id="${product.id}" data-name="${product.title}" data-description="${product.description}" data-price="${product.price}" data-brand="${product.brand}" data-image_url="${product.image_url}">Add to cart</button>
+                                                    <button class="cart-button" data-id="${product.id}" data-name="${product.title}" data-description="${product.description}" data-price="${product.price}" data-brand="${product.brand}" data-image_url="${product.image_url}"><i class="${cssClass} fa fa-shopping-cart"></i>Add to cart</button>
                                                     <a href="detail.html?id=${product.id}"><button class="detail-button">View</button></a>
                                                     <a href="edit.html?id=${product.id}"><button class="edit-button">Edit</button></a>
                                                 </div>

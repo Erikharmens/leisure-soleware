@@ -12,9 +12,6 @@ export default function createMenu() {
 
     const cartProducts = getExistingCart();
 
-
-   
-
     let authLink = `<a id="login" href="login.html" class="${pathname === "/login.html" ? "active" : ""}">LOGIN</a>`;
     let authLinkFav = `<a href="cart.html" id="myCart" class="${pathname === "/cart.html" ? "active" : ""}">MY CART (${cartProducts.length})</a>`;
 
@@ -24,10 +21,10 @@ export default function createMenu() {
     }
     container.innerHTML = `
             <div class="menu">
-                <a href="/" class="${pathname === "/" || pathname === "/index.html" ? "active" : ""}">HOME</a>
-                <a href="shop.html" class="${pathname === "/" || pathname === "/shop.html" ? "active" : ""}">SHOP</a>
+                <a href="index.html" class="${pathname === "/" || pathname === "/index.html" ? "active" : ""}">HOME</a>
+                <a href="shop.html" class="${pathname === "shop.html" || pathname === "/shop.html" ? "active" : ""}">SHOP</a>
                 <i class="fa fa-search"></i>
-                <input class="search" placeholder="Search shop..." />
+                <input class="search" placeholder="Search..." />
                 ${authLink} ${authLinkFav}
             </div>`;
 

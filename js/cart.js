@@ -8,22 +8,33 @@ console.log(cartProducts);
 
 const productContainer = document.querySelector(".product-container");
 
+const totalPriceContainer = document.querySelector(".total-price-container");
+let totalPrice = 0;
+
+cartProducts.forEach((cartProduct) => {
+    totalPrice += parseFloat(cartProduct.price);
+});
+
+totalPriceContainer.innerHTML = `<p class="cart-text">Total price is: ${totalPrice} NOK</p>`;
+
+
+
 if (cartProducts.length === 0) {
     productContainer.innerHTML = "No items in cart.. View our shop and add products to your cart.";
 } else {
     cartProducts.forEach((cartProduct) => {
         productContainer.innerHTML += `<div class="product">
         <img class="productImage" src="${cartProduct.image}">
-        <h4>${cartProduct.name}</h4>
-        <h4>${cartProduct.price} NOK</h4>
+        <a href="detail.html?id=${cartProduct.id}"><h4 class="product-title">${cartProduct.name}</h4></a>
+        <p class="product-price">${cartProduct.price} NOK</p>
         <a href="detail.html?id=${cartProduct.id}"><button class="detail-button">View</button></a>
         </div>`;
     });
 }
 
-const clearFavButton = document.querySelector(".removeProducts");
+const clearCartButton = document.querySelector(".removeProducts");
 
-clearFavButton.onclick = function deleteProducts() {
+clearCartButton.onclick = function deleteProducts() {
     if ( cartProducts.length == 0) {
         productContainer.innerHTML = "No items in cart.. View our shop and add products to your cart.";
     } else {

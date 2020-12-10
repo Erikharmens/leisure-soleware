@@ -47,7 +47,7 @@
     margin: 0 auto;
     margin-top: 1rem;
     padding: 1rem;
-    padding-bottom: 50px;
+    padding-bottom: 60px;
     max-width: 700px;
     box-shadow: 0 8px 4px 4px rgba(0, 0, 0, 0.2);
     border: 3px solid var(--chocolatebar);
@@ -107,6 +107,7 @@
   }
   .login-text:hover {
       color: var(--leatherbrown-light);
+      text-decoration: underline;
   }
 
   .login-text-newuser {
@@ -117,9 +118,9 @@
 
   .member {
       color: var(--leatherbrown-light);
-      text-decoration: underline;
       cursor: pointer;
   }
   .member:hover {
       color: var(--chocolatebar);
+      text-decoration: underline;
   }
