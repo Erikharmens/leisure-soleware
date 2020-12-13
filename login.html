@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/login.css">
     <link rel="stylesheet" href="/css/navbar.css">
     <title>Login</title>
 </head>
+
 <body>
     <div class="container">
         <div class="menu-container"></div>
-
         <div class="form-container">
             <form class="login-form">
                 <h1 class="login-title">Login</h1>
                 <hr>
                 <div class="message-container"></div>
-    
                 <div class="login-form-user">
                     <label for="username"> Username/Email</label>
-                    <input id="username" type="text"/>
+                    <input id="username" type="text" />
                 </div>
                 <div class="login-form-pass">
                     <label for="password"> Password</label>
@@ -32,8 +32,11 @@
                 <button class="login-form-button">Submit</button>
                 <p class="login-text-newuser">Not a member? <span class="member">Sign up here</span></p>
             </form>
-
         </div>
+    </div>
+
+    <div class="logo-block">
+        <img class="ls-logo" src="images/lslogopngcolor.png">
     </div>
 
     <footer class="footer">
@@ -46,14 +49,17 @@
                 <h2 class="footer-title">Newsletter Subscription</h2>
                 <input class="newsletter-input" type="text" placeholder="Your Email..." name="mail" required> <br>
                 <label class="footer-label">
-                    <input type="checkbox" checked="checked" name="subscribe"> I've read and accepted Leisure Solewares's Privacy Policy
+                    <input type="checkbox" checked="checked" name="subscribe"> I've read and accepted Leisure
+                    Solewares's Privacy Policy
                     <input class="newsletter-button" type="submit" value="Subscribe">
                 </label>
                 <br>
             </div>
         </div>
     </footer>
-    
+
     <script src="js/login.js" type="module"></script>
+
 </body>
+
 </html>

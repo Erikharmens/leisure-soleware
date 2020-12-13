@@ -6,7 +6,7 @@ import deleteButton from './components/products/deleteButton.js';
 
 const token = getToken();
 
-if(!token) {
+if (!token) {
     location.href = "/";
 }
 
@@ -31,7 +31,6 @@ const message = document.querySelector(".message-container");
 const loading = document.querySelector(".loading");
 const image = document.querySelector("#image");
 
-
 (async function () {
     try {
         const response = await fetch(productUrl);
@@ -42,12 +41,9 @@ const image = document.querySelector("#image");
         description.value = details.description;
         idInput.value = details.id;
 
-        
-
         deleteButton(details.id);
 
-        console.log(details);
-    } catch(error) {
+    } catch (error) {
         console.log(error);
     }
     finally {
@@ -79,7 +75,6 @@ function submitForm(event) {
     if (titleValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || descriptionValue.length === 0) {
         displayMessage("warning", "Please supply proper values", ".message-container");
     }
-
     updateProduct(titleValue, priceValue, descriptionValue, idValue, imageValue, featuredValue);
 }
 
@@ -99,7 +94,6 @@ async function updateProduct(title, price, description, id, image_url, featured)
     try {
         const response = await fetch(url, options);
         const json = await response.json();
-        console.log(json);
 
         if (json.updated_at) {
             displayMessage("success", "Product updated", ".message-container");
@@ -109,7 +103,7 @@ async function updateProduct(title, price, description, id, image_url, featured)
             displayMessage("error", json.message, ".message-container");
         }
 
-    } catch(error) {
+    } catch (error) {
         console.log(error);
     }
 }

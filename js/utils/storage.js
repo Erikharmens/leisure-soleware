@@ -11,15 +11,13 @@ export function getToken() {
 
 export function saveUser(user) {
     saveToStorage(userKey, user);
-} 
+}
 
 export function getUsername() {
     const user = getFromStorage(userKey);
-
-    if(user) {
+    if (user) {
         return user.username;
     }
-
     return null;
 }
 
@@ -34,10 +32,8 @@ function saveToStorage(key, value) {
 
 function getFromStorage(key) {
     const value = localStorage.getItem(key);
-
-    if(!value) {
+    if (!value) {
         return null;
     }
-
     return JSON.parse(value);
 }

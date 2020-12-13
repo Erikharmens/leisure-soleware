@@ -4,20 +4,16 @@ import createMenu from './components/common/createMenu.js';
 createMenu();
 
 const cartProducts = getExistingCart();
-console.log(cartProducts);
-
 const productContainer = document.querySelector(".product-container");
 
-const totalPriceContainer = document.querySelector(".total-price-container");
 let totalPrice = 0;
 
 cartProducts.forEach((cartProduct) => {
     totalPrice += parseFloat(cartProduct.price);
 });
 
+const totalPriceContainer = document.querySelector(".total-price-container");
 totalPriceContainer.innerHTML = `<p class="cart-text">Total price is: ${totalPrice} NOK</p>`;
-
-
 
 if (cartProducts.length === 0) {
     productContainer.innerHTML = "No items in cart.. View our shop and add products to your cart.";
@@ -35,7 +31,7 @@ if (cartProducts.length === 0) {
 const clearCartButton = document.querySelector(".removeProducts");
 
 clearCartButton.onclick = function deleteProducts() {
-    if ( cartProducts.length == 0) {
+    if (cartProducts.length == 0) {
         productContainer.innerHTML = "No items in cart.. View our shop and add products to your cart.";
     } else {
         localStorage.removeItem("cartProducts");

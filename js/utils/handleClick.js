@@ -2,8 +2,6 @@ import createMenu from '../components/common/createMenu.js';
 import { getExistingCart } from './cartFunctions.js';
 
 export default function handleClick() {
-
-
   const id = this.dataset.id;
   const name = this.dataset.name;
   const description = this.dataset.description;
@@ -11,12 +9,12 @@ export default function handleClick() {
   // const brand = this.dataset.brand;
   const image = this.dataset.image_url;
 
-
   const currentCart = getExistingCart();
 
   const productExists = currentCart.find(function (cart) {
     return cart.id === id;
   });
+
   // if product does not exist in cart (undefined)
   if (productExists === undefined) {
     const product = { id: id, name: name, description: description, price: price, image: image };
@@ -27,7 +25,7 @@ export default function handleClick() {
     saveCart(updatedCart);
   }
   createMenu();
-}
+};
 
 function saveCart(cart) {
   localStorage.setItem("cartProducts", JSON.stringify(cart));

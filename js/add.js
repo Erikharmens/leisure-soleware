@@ -5,7 +5,7 @@ import { baseUrl } from './settings/api.js';
 
 const token = getToken();
 
-if(!token) {
+if (!token) {
     location.href = "/";
 }
 
@@ -29,30 +29,24 @@ function submitForm(event) {
     const priceValue = parseFloat(price.value);
     const descriptionValue = description.value.trim();
     const imageValue = image.value.trim();
-    
+
     let featuredValue = false;
     if (document.querySelector("#featured").checked) {
         featuredValue = true;
     } else {
         featuredValue = false;
     }
-    
-    //console.log("priceValue", priceValue);
 
-    if(titleValue.length === null || priceValue.length === null || isNaN(priceValue) || descriptionValue.length === null || imageValue === null) {
-       return displayMessage("warning", "Please supply proper values", ".message-container");
+    if (titleValue.length === null || priceValue.length === null || isNaN(priceValue) || descriptionValue.length === null || imageValue === null) {
+        return displayMessage("warning", "Please supply proper values", ".message-container");
     }
-    console.log("imageValue: ", imageValue);
 
     addProduct(titleValue, priceValue, descriptionValue, imageValue, featuredValue);
 }
 
 async function addProduct(title, price, description, image_url, featured) {
     const url = baseUrl + "products";
-
     const data = JSON.stringify({ title: title, price: price, description: description, image_url: image_url, featured: featured });
-
-
 
     const options = {
         method: "POST",
@@ -76,10 +70,8 @@ async function addProduct(title, price, description, image_url, featured) {
             displayMessage("error", json.message, ".message-container");
         }
 
-        console.log(json);
-    } catch(error) {
-        console.log(error);
+    } catch (error) {
         displayMessage("error", "An error occured", ".message-container");
     }
-}
+};
 

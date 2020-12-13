@@ -12,7 +12,6 @@ createMenu();
 
 form.addEventListener("submit", submitForm);
 
-
 function submitForm(event) {
     event.preventDefault();
 
@@ -21,17 +20,15 @@ function submitForm(event) {
     const usernameValue = username.value.trim();
     const passwordValue = password.value.trim();
 
-    if(usernameValue.length === 0 || passwordValue.length === 0) {
+    if (usernameValue.length === 0 || passwordValue.length === 0) {
         return displayMessage("warning", "Invalid values", ".message-container");
     }
-
     doLogin(usernameValue, passwordValue);
 }
 
 async function doLogin(username, password) {
     const url = baseUrl + "auth/local";
-
-    const data = JSON.stringify({ identifier: username, password: password});
+    const data = JSON.stringify({ identifier: username, password: password });
 
     const options = {
         method: "POST",
@@ -44,22 +41,19 @@ async function doLogin(username, password) {
     try {
         const response = await fetch(url, options);
         const json = await response.json();
-        console.log(json);
 
-        if(json.user) {
-            // displayMessage("success", "Successfully logged in", ".message-container");
-
+        if (json.user) {
             saveToken(json.jwt);
             saveUser(json.user);
 
             location.href = "/";
         }
 
-        if(json.error) {
+        if (json.error) {
             displayMessage("warning", "Invalid login details", ".message-container");
         }
     }
-    catch(error) {
+    catch (error) {
         console.log(error);
     }
 }

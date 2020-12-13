@@ -17,9 +17,6 @@ export function renderProducts(productsToRender) {
             cssClass = "fa";
         }
 
-
-        
-
         productContainer.innerHTML += `<div class="product">
                                             <div class="single-product">
                                                 <div class="column">
@@ -34,7 +31,5 @@ export function renderProducts(productsToRender) {
                                                 </div>
                                             </div>
                                         </div>`;
-    
-        
     });
 }

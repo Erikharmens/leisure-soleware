@@ -3,16 +3,12 @@ import { getToken } from "../../utils/storage.js";
 
 export default function deleteButton(id) {
   const container = document.querySelector(".delete-container");
-
   container.innerHTML = `<button type="button" class="delete">Delete</button>`;
 
   const button = document.querySelector("button.delete");
-
   button.onclick = async function () {
-    console.log(id);
 
     const doDelete = confirm("Are you sure you want to delete this product?");
-    console.log(doDelete);
 
     if (doDelete) {
       const url = baseUrl + "products/" + id;
@@ -33,7 +29,6 @@ export default function deleteButton(id) {
 
         location.href = "/";
 
-        console.log(json);
       } catch (error) {
         console.log(error);
       }

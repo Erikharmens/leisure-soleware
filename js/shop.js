@@ -4,7 +4,6 @@ import createMenu from './components/common/createMenu.js';
 import handleClick from './utils/handleClick.js';
 import { renderProducts } from './ui/renderProducts.js';
 import { searchProducts } from './ui/searchProducts.js';
-//import { getExistingCart } from './utils/cartFunctions.js';
 
 const productsUrl = baseUrl + "products";
 
@@ -14,19 +13,16 @@ async function getProducts() {
     try {
         const response = await fetch(productsUrl);
         const json = await response.json();
-
-        // console.log(json);
+        const addToCartButtons = document.querySelectorAll(".product .cart-button");
 
         renderProducts(json);
         searchProducts(json);
-        console.log("json: ", json);
 
-        const addToCartButtons = document.querySelectorAll(".product .cart-button");
 
         addToCartButtons.forEach((button) => {
             button.addEventListener("click", handleClick);
         });
-    } catch(error) {
+    } catch (error) {
         displayMessage("error", error, ".product-container")
     }
 }

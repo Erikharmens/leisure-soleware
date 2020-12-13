@@ -18,7 +18,7 @@ export function renderFeaturedProducts(productsToRender) {
         }
 
         /* Check if product is features. only display those with true value */
-        if(product.featured === true) {
+        if (product.featured === true) {
 
             productContainer.innerHTML += `<div class="product">
                                                 <div class="single-product">

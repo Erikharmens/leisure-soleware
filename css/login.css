@@ -1,126 +1,105 @@
 :root {
-    /* HEX: #30241C */
-    --chocolatebar-base: 24;
-    --chocolatebar: hsla(var(--chocolatebar-base), 26%, 15%, 100%);
-    --chocolatebar-dark: hsla(var(--chocolatebar-base), 26%, 10%, 100%);
-    --chocolatebar-light: hsla(var(--chocolatebar-base), 26%, 20%, 100%);
-  
-    /* HEX: #5E3123 */
-    --leatherbrown-base: 14;
-    --leatherbrown: hsla(var(--leatherbrown-base), 46%, 25%, 100%);
-    --leatherbrown-dark: hsla(var(--leatherbrown-base), 46%, 20%, 100%);
-    --leatherbrown-light: hsla(var(--leatherbrown-base), 46%, 30%, 100%);
-  }
-  
-  .login-form {
-    font-family: "Lato", sans-serif;
-    height: 300px;
-  }
-  
-  /* Style inputs with type="text", select elements and textareas */
-  input[type="text"],[type="password"]
-  textarea {
-    width: 100%;
-    /* Full width */
-    padding: 12px;
-    /* Some padding */
-    border: 0;
-    /* Gray border */
-    border-radius: 4px;
-    /* Rounded borders */
-    box-sizing: border-box;
-    /* Make sure that padding and width stays in place */
-    margin-top: 6px;
-    /* Add a top margin */
-    margin-bottom: 16px;
-    /* Bottom margin */
-    resize: vertical;
-    /* Allow the user to vertically resize the textarea (not horizontally) */
-  }
-  
+  /* HEX: #30241C */
+  --chocolatebar-base: 24;
+  --chocolatebar: hsla(var(--chocolatebar-base), 26%, 15%, 100%);
+  --chocolatebar-dark: hsla(var(--chocolatebar-base), 26%, 10%, 100%);
+  --chocolatebar-light: hsla(var(--chocolatebar-base), 26%, 20%, 100%);
 
-  
+  /* HEX: #5E3123 */
+  --leatherbrown-base: 14;
+  --leatherbrown: hsla(var(--leatherbrown-base), 46%, 25%, 100%);
+  --leatherbrown-dark: hsla(var(--leatherbrown-base), 46%, 20%, 100%);
+  --leatherbrown-light: hsla(var(--leatherbrown-base), 46%, 30%, 100%);
+}
 
-  /* Add a background color and some padding around the form */
-  .form-container {
-    border-radius: 3px;
-    margin: 0 auto;
-    margin-top: 1rem;
-    padding: 1rem;
-    padding-bottom: 60px;
-    max-width: 700px;
-    box-shadow: 0 8px 4px 4px rgba(0, 0, 0, 0.2);
-    border: 3px solid var(--chocolatebar);
-  }
-  
-  .login-form-user input:focus, .login-form-pass input:focus {
-      outline: none;
-  }
+.login-form {
+  font-family: "Lato", sans-serif;
+  height: 300px;
+}
 
-  .login-form-user, .login-form-pass {
-      color: var(--chocolatebar);
-  }
+input[type="text"],
+[type="password"] textarea {
+  width: 100%;
+  padding: 12px;
+  border: 0;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
 
-  .login-form-pass input{
-      width: 100%;
-      /* Full width */
-      padding: 12px;
-      /* Some padding */
-      border: 0;
-      /* Gray border */
-      border-radius: 4px;
-      /* Rounded borders */
-      box-sizing: border-box;
-      /* Make sure that padding and width stays in place */
-      margin-top: 6px;
-      /* Add a top margin */
-      margin-bottom: 16px;
-      /* Bottom margin */
-      resize: vertical;
-  }
+.form-container {
+  border-radius: 3px;
+  margin: 0 auto;
+  margin-top: 1rem;
+  padding: 1rem;
+  padding-bottom: 60px;
+  max-width: 700px;
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.2);
+  border: 3px solid var(--chocolatebar);
+}
 
-  
-  .login-form-button {
-      float: left;
-      padding: 1rem 3rem;
-      background-color: var(--chocolatebar);
-      color: #f1f1f1;
-      font-size: 16px;
-      border-radius: 3px;
-      border: none;
-      cursor: pointer;
-  }
-  
-  .login-form-button:hover {
-      background-color: var(--leatherbrown);
-      /* background-color: #45a049; */
-      
-      
-  }
+.login-form-user input:focus,
+.login-form-pass input:focus {
+  outline: none;
+}
 
-  .login-text {
-      width: auto;
-      color: var(--chocolatebar);
-      cursor: pointer;
-      margin-top: -0.5rem;
-      font-size: 14px;
-  }
-  .login-text:hover {
-      color: var(--leatherbrown-light);
-      text-decoration: underline;
-  }
+.login-form-user,
+.login-form-pass {
+  color: var(--chocolatebar);
+}
 
-  .login-text-newuser {
-      display: block;
-      float: right;
-      margin-right: 0.8rem;
-  }
+.login-form-pass input {
+  width: 100%;
+  padding: 12px;
+  border: 0;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
 
-  .member {
-      color: var(--leatherbrown-light);
-      cursor: pointer;
-  }
-  .member:hover {
-      color: var(--chocolatebar);
-      text-decoration: underline;
-  }
+
+.login-form-button {
+  float: left;
+  padding: 1rem 3rem;
+  background-color: var(--chocolatebar);
+  color: #f1f1f1;
+  font-size: 16px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+}
+
+.login-form-button:hover {
+  background-color: var(--leatherbrown);
+}
+
+.login-text {
+  width: auto;
+  color: var(--chocolatebar);
+  cursor: pointer;
+  margin-top: -0.5rem;
+  font-size: 14px;
+}
+
+.login-text:hover {
+  color: var(--leatherbrown-light);
+  text-decoration: underline;
+}
+
+.login-text-newuser {
+  display: block;
+  float: right;
+  margin-right: 0.8rem;
+}
+
+.member {
+  color: var(--leatherbrown-light);
+  cursor: pointer;
+}
+
+.member:hover {
+  color: var(--chocolatebar);
+  text-decoration: underline;
+}
