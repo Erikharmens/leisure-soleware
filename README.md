@@ -3,6 +3,28 @@
 # Semester project 2
 
 To create an e-commerce website that has an Admin and Front-End respectively. The Front-End should be responsive and the website is to be populated by an API supplied by Noroff. 
+## Report 
+
+#### Q.1 - How the project went?
+This project has been a really fun and challenging assignment. I feel like I get more and more understanding of JS and what it does (scraping the top of the iceberg). Especially when it's working as intended. Overall I'm pleased with the result even though there are plenty of things I could have done better or differently. As you progress on the site new stuff and ideas pop up but time is a limit. I also feel like I shot myself in the foot not going for any CSS frameworks, or creating a better structure for it. Maybe it's because I wanted to learn more and explore deeper with just regular CSS and not tweak on pre-made components.. Anyways, the CSS files might be a big mess, but most of it is working I'm sure..
+
+### Q.2 - What was difficult?
+Many issues and struggles were made throughout this project. Having a great structure and overview of all the files and components is really important as the files keep stacking up towards the end of the project. When it comes to the JS part, most of the stuff required are stuff we have been doing previously but perhaps not as advanced where on our own, we have to figure out the next steps to make it work. Another difficult thing is the heartbreak of seeing bugs after bugs pop up without the slightest idea of why and not knowing how to fix it or where to add a line/function etc. Many console logs were made and some of the bugs got exterminated.
+
+### Q.3 - What was easy?
+Nothing was particularly easy but I would say following the video tutorials and creating the different simple components required wasn't too hard. On the other hand, converting some of these functions and using them differently wasn't that easy. Still it was a great tool to understand more of these methods and I feel like after going through them several times, I get a better and better understanding of how it works. 
+
+### Q.4 - What I enjoyed the most?
+Seeing results as I progress. It's not all fun and games when youre struggling with the code but as you see it bit by bit come to pieces it's a wonderful feeling. I also enjoyed the creative freedom of what we could choose for our own theme. Working on products you have interest in or like will probably boost your motivation especially when you look at images of these products for hours and hours. I don't have any big interests in leather shoes but I got an idea for a logo and went from there. Also enjoyed designing the layout even though I could have structured it a lot better with the CSS. I've learned my mistakes (hopefully).
+
+### Q.5 - What I still think I need to learn or focus on more?
+Plenty of things. To learn: more JS ofcourse! Being able to add other bonus functions to improve the site structure and playfullness. But sometimes "less is more" works fine when youre not that experienced. I need to learn to be more structured when it comes to time management. I'd rather be done a few days before than having some really hectic last days but it's easier said than done.
+I would focus more on options and perhaps "shortcuts" like for instance different CSS frameworks. I could have saved a lot of time going for one instead of tweaking and messing up big chunks of code. Also by experiencing this projects progress, I will hopefully next time be more prepared for better scheduling knowing what takes more time than anticipated.
+
+Overall a really fun assignment even though it tingled with my insanity sometimes.
+Happy holidays!
+-Erik Harmens
+
 
 ## Brief
 
